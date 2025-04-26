@@ -21,9 +21,10 @@
     "typescript": "^5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "gh-pages": "^6.3.0",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.4"
+    "@tailwindcss/postcss8": "^0.1.0",
+    "tailwindcss": "^3.3.0",
+    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.3.0"
   }
 }

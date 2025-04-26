@@ -1,7 +1,8 @@
 module.exports = {
   plugins: {
-    'postcss-import': {},
-    'tailwindcss': {},
-    'autoprefixer': {}
+    '@tailwindcss/postcss8': {},
+    autoprefixer: {},
   }
-} 
+} git add package.json tailwind.config.js postcss.config.js
+git commit -m "Add @tailwindcss/postcss8 dependency and update configuration"
+git push origin main
