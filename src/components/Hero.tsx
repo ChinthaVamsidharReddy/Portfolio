@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Hero() {
   const [imageError, setImageError] = useState(false);
@@ -13,15 +12,11 @@ export default function Hero() {
             <div className="mb-6 relative">
               {!imageError ? (
                 <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-[#64ffda]">
-                  <Image
-                    src="/vamsi.jpg"
+                  <img
+                    src="/Portfolio/vamsi.jpg"
                     alt="Vamsidhar Reddy - Full Stack Developer"
-                    width={160}
-                    height={160}
-                    className="object-cover"
+                    className="w-full h-full object-cover"
                     onError={() => setImageError(true)}
-                    priority
-                    quality={75}
                   />
                 </div>
               ) : (
@@ -48,16 +43,16 @@ export default function Hero() {
               <Link 
                 href="#projects"
                 className="px-8 py-4 border-2 border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 transition-colors text-sm"
-                style={{ fontFamily: 'Press Start 2P, monospace' }} // Apply custom font here
+                style={{ fontFamily: 'Press Start 2P, monospace' }}
               >
                 Check out my work!
               </Link>
               <a 
-                href="/Vamsidhar Reddy Resume.pdf"
+                href="/Portfolio/Vamsidhar Reddy Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-[#64ffda] text-[#0a192f] rounded hover:bg-[#64ffda]/90 transition-colors text-sm"
-                style={{ fontFamily: 'Press Start 2P, monospace' }} // Apply custom font here
+                style={{ fontFamily: 'Press Start 2P, monospace' }}
               >
                 Resume
               </a>
