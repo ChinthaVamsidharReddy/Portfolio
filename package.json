@@ -23,6 +23,7 @@
   "devDependencies": {
     "@types/node": "22.15.2",
     "@types/react": "19.1.2",
+    "@types/react-scroll": "^1.8.10",
     "autoprefixer": "^10.4.16",
     "gh-pages": "^6.3.0",
     "postcss": "^8.4.31",
