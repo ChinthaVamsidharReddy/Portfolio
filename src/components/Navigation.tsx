@@ -72,7 +72,7 @@ export default function Navigation() {
               Contact
             </ScrollLink>
             <a
-              href="/Vamsidhar Reddy Resume.pdf"
+              href="/Portfolio/Vamsidhar Reddy Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 border-2 border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 transition-colors"

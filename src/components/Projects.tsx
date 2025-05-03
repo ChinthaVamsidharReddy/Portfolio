@@ -37,7 +37,7 @@ const projects: Project[] = [
     title: "Service Hub",
     description: "A comprehensive service booking platform that connects service providers with customers, featuring real-time updates and efficient management tools.",
     technologies: ["ReactJS", "NodeJS", "MySQL", "Express.js", "Socket.io", "JWT Authentication"],
-    image: "/image.png",
+    image: "/Portfolio/image.png",
     githubLink: "https://github.com/ChinthaVamsidharReddy/Service-Hub",
     demoLink: "https://service-hub-demo.com",
     features: [
@@ -55,7 +55,7 @@ const projects: Project[] = [
     title: "ATM Simulation",
     description: "A Java-based ATM simulation system that replicates real-world banking operations with secure transaction handling.",
     technologies: ["Java", "Object-Oriented Programming", "File I/O", "Exception Handling"],
-    image: "/atm.png",
+    image: "/Portfolio/atm.png",
     githubLink: "https://github.com/ChinthaVamsidharReddy/ATM-Simulation",
     features: [
       "Secure PIN authentication system",
@@ -72,7 +72,7 @@ const projects: Project[] = [
     title: "To-Do List Web App",
     description: "A modern task management application with intuitive user interface and persistent data storage.",
     technologies: ["HTML5", "CSS3", "JavaScript", "Local Storage API", "Responsive Design"],
-    image: "/todo.jpg",
+    image: "/Portfolio/todo.jpg",
     githubLink: "https://github.com/ChinthaVamsidharReddy/To-do-list",
     demoLink: "https://chinthavamsidharreddy.github.io/To-do-list/",
     features: [
