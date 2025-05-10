@@ -138,7 +138,7 @@ export default function Navigation() {
             Contact
           </ScrollLink>
           <a
-            href="https://drive.google.com/file/d/1ybHDN2nKNIdA-xhB8uVOkD3ekBHn7Hb2/view?usp=sharing"
+            href="/Portfolio/Vamsidhar Reddy Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="block px-4 py-2 border-2 border-[#64ffda] text-[#64ffda] rounded hover:bg-[#64ffda]/10 transition-colors text-center"
