@@ -23,7 +23,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     title: 'Backend',
-    skills: ['Node.js', 'Express.js', 'J2EE', 'Spring', 'Spring Boot'],
+    skills: ['Node.js','Spring', 'Express.js', 'Spring Boot'],
     icon: '⚙️',
     description: 'Backend frameworks and technologies'
   },
