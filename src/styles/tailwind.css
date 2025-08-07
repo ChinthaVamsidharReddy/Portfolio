@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core System Colors */
+    --color-background: #0d0d0d; /* Deep focus canvas */
+    --color-foreground: #f8fafc; /* Extended reading comfort */
+    --color-border: #2d3748; /* Clean technical borders */
+    --color-input: #1a1a1a; /* Form input background */
+    --color-ring: #00d4ff; /* Focus ring electric blue */
+    
+    /* Card & Surface Colors */
+    --color-card: #1a1a1a; /* Subtle content elevation */
+    --color-card-foreground: #f8fafc; /* Card text color */
+    --color-popover: #1a1a1a; /* Popover background */
+    --color-popover-foreground: #f8fafc; /* Popover text */
+    
+    /* Muted Colors */
+    --color-muted: #2d3748; /* Muted background */
+    --color-muted-foreground: #94a3b8; /* Supporting information hierarchy */
+    
+    /* Brand Primary Colors */
+    --color-primary: #00d4ff; /* Electric innovation */
+    --color-primary-foreground: #0d0d0d; /* Dark text on electric blue */
+    
+    /* Brand Secondary Colors */
+    --color-secondary: #8b5cf6; /* Interactive intelligence */
+    --color-secondary-foreground: #f8fafc; /* Light text on purple */
+    
+    /* Accent Colors */
+    --color-accent: #00ff88; /* Growth and success */
+    --color-accent-foreground: #0d0d0d; /* Dark text on green */
+    
+    /* Status Colors */
+    --color-success: #10b981; /* Achievement confirmation */
+    --color-success-foreground: #f8fafc; /* Light text on success */
+    
+    --color-warning: #f59e0b; /* Important attention */
+    --color-warning-foreground: #0d0d0d; /* Dark text on warning */
+    
+    --color-error: #ef4444; /* Clear problem identification */
+    --color-error-foreground: #f8fafc; /* Light text on error */
+    
+    --color-destructive: #ef4444; /* Destructive actions */
+    --color-destructive-foreground: #f8fafc; /* Light text on destructive */
+    
+    /* Conversion Colors */
+    --color-conversion: #ff6b35; /* Warm orange for CTAs */
+    --color-conversion-foreground: #f8fafc; /* Light text on conversion */
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body, p, span, div {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glow-effect {
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
+  }
+  
+  .code-block {
+    @apply bg-card border border-border rounded-lg p-4;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(0, 255, 136, 0.1) 100%);
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  .typewriter {
+    overflow: hidden;
+    border-right: 2px solid var(--color-primary);
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--color-primary); }
+  }
+  
+  .skill-meter {
+    background: conic-gradient(var(--color-primary) var(--progress, 0%), var(--color-muted) 0%);
+    transition: --progress 2s ease-out;
+  }
+  
+  .card-flip {
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .card-flip:hover {
+    transform: perspective(1000px) rotateY(180deg);
+  }
+  
+  .parallax-slow {
+    transform: translateZ(-1px) scale(2);
+  }
+  
+  .parallax-fast {
+    transform: translateZ(-2px) scale(3);
+  }
+  
+  .floating-badge {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .pulse-subtle {
+    animation: pulse-subtle 10s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-subtle {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+}
