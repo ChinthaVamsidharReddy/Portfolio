@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from "react-router-dom";
+
 import Header from '../../components/ui/Header';
 import HeroSection from './components/HeroSection';
 import SkillsVisualization from './components/SkillsVisualization';
@@ -76,7 +78,7 @@ const HomepageDeveloperPortfolioHub = () => {
             "sameAs": [
               "https://github.com/ChinthaVamsidharReddy",
               "https://www.linkedin.com/in/chintha-vamsidhar-reddy/",
-              "https://twitter.com/vamsidhar"
+              "https://x.com/_V_a_m_s_i_"
             ],
             "knowsAbout": [
               "React",
@@ -142,19 +144,19 @@ const HomepageDeveloperPortfolioHub = () => {
                 <h4 className="font-poppins font-semibold mb-4">Quick Links</h4>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <a href="/about-development-philosophy" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                    <Link to="/about-development-philosophy" className="text-muted-foreground hover:text-primary transition-colors duration-200">
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="/technical-portfolio-case-studies" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                    <Link to="/technical-portfolio-case-studies" className="text-muted-foreground hover:text-primary transition-colors duration-200">
                       Projects
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="/professional-contact-collaboration" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                    <Link to="/professional-contact-collaboration" className="text-muted-foreground hover:text-primary transition-colors duration-200">
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -186,7 +188,7 @@ const HomepageDeveloperPortfolioHub = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://twitter.com/vamsidhar"
+                    href="https://x.com/_V_a_m_s_i_"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-8 h-8 bg-muted/20 rounded-lg flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors duration-200"

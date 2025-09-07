@@ -118,15 +118,17 @@ const Header = () => {
                 Resume
               </Button>
             </a>
-            <Button
-              variant="default"
-              size="sm"
-              iconName="MessageCircle"
-              iconPosition="left"
-              className="bg-conversion hover:bg-conversion/90 text-conversion-foreground"
-            >
-              Let's Talk
-            </Button>
+            <Link to="/professional-contact-collaboration">
+  <Button
+    variant="default"
+    size="sm"
+    iconName="MessageCircle"
+    iconPosition="left"
+    className="bg-conversion hover:bg-conversion/90 text-conversion-foreground"
+  >
+    Let's Talk
+  </Button>
+</Link>
           </div>
 
           {/* Mobile Menu Button */}
