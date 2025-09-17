@@ -12,7 +12,7 @@ const Header = () => {
     { name: 'Home', path: '/homepage-developer-portfolio-hub', icon: 'Home' },
     { name: 'About', path: '/about-development-philosophy', icon: 'User' },
     { name: 'Portfolio', path: '/technical-portfolio-case-studies', icon: 'Briefcase' },
-    { name: 'Resume', path: '/assets/pdf/Vamsidhar_Reddy_Resume.pdf', icon: 'FileText' },
+    { name: 'Resume', path: './assets/pdf/Vamsidhar_Reddy_Resume.pdf', icon: 'FileText' },
     { name: 'Skills', path: '/skills-technical-expertise', icon: 'Code' },
     { name: 'Contact', path: '/professional-contact-collaboration', icon: 'Mail' }
   ];
@@ -104,7 +104,7 @@ const Header = () => {
           {/* CTA Buttons - Desktop */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="/assets/pdf/Vamsidhar_Reddy_Resume.pdf"
+              href="./assets/pdf/Vamsidhar_Reddy_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >

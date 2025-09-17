@@ -5,7 +5,7 @@ import tagger from "@dhiwise/component-tagger";
 import ghPages from 'vite-plugin-gh-pages'
 
 export default defineConfig({
-  base: '/',
+  base: '/Portfolio/',
   plugins: [tsconfigPaths(), react(), tagger()],
   
 })

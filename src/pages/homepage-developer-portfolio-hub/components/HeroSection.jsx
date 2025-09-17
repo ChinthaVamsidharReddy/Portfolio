@@ -113,33 +113,37 @@ app.listen(3000);`
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/technical-portfolio-case-studies">
-                <Button
-                  variant="default"
-                  size="lg"
-                  iconName="Briefcase"
-                  iconPosition="left"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground glow-effect"
-                >
-                  View My Projects
-                </Button>
-              </Link>
-              <a 
-                  href="C:\Vamsi\devportfolio_pro (2)\devportfolio_pro\public\assets\images\pdf\Vamsidhar_Reddy_Resume.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-              <Button
-                variant="outline"
-                size="lg"
-                iconName="Download"
-                iconPosition="left"
-                className="border-conversion text-conversion hover:bg-conversion/10"
-              >
-                Download Resume
-              </Button>
-              </a>
-            </div>
+  {/* Internal navigation */}
+  <Link to="/technical-portfolio-case-studies">
+    <Button
+      variant="default"
+      size="lg"
+      iconName="Briefcase"
+      iconPosition="left"
+      className="bg-primary hover:bg-primary/90 text-primary-foreground glow-effect"
+    >
+      View My Projects
+    </Button>
+  </Link>
+
+  {/* External download */}
+  <a
+    href={`./assets/pdf/Vamsidhar_Reddy_Resume.pdf`}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button
+      variant="outline"
+      size="lg"
+      iconName="Download"
+      iconPosition="left"
+      className="border-conversion text-conversion hover:bg-conversion/10"
+    >
+      Download Resume
+    </Button>
+  </a>
+</div>
+
 
             {/* Quick Stats */}
             <div className="flex items-center space-x-8 pt-4">
