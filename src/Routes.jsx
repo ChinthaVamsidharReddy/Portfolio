@@ -13,7 +13,7 @@ import NotFound from "pages/NotFound";
 import ContactMethods from "pages/professional-contact-collaboration/components/ContactMethods";
 const Routes = () => {
   return (
-    <BrowserRouter basename="/Portfolio">
+    <BrowserRouter >
       <ErrorBoundary>
       <ScrollToTop />
       <RouterRoutes>
