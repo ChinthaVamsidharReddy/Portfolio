@@ -150,6 +150,28 @@ export default {
     },
   },
   plugins: [
-    require("tailwindcss-animate"),
-  ],
+  require("tailwindcss-animate"),
+
+  // 👇 Add this custom plugin
+  function ({ addUtilities }) {
+    addUtilities({
+      // Enables 3D perspective
+      '.perspective-1000': {
+        perspective: '1000px',
+      },
+      // Ensures 3D children render properly
+      '.preserve-3d': {
+        transformStyle: 'preserve-3d',
+      },
+      // Hides the back face of flipped elements
+      '.backface-hidden': {
+        backfaceVisibility: 'hidden',
+      },
+      // Rotate card for flip effect
+      '.rotate-y-180': {
+        transform: 'rotateY(180deg)',
+      },
+    })
+  },
+],
 }

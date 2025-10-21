@@ -6,9 +6,28 @@ const CareerTimeline = () => {
 
   const timelineData = [
     {
-      id: 1,
+  id: 2,
+  year: "2025",
+  title: "Team Lead & Full-Stack Developer",
+  company: "Infosys Springboard",
+  type: "experience",
+  description: "Led the development of a web-based Study Group Finder & Collaboration Platform to help students form study groups, communicate in real-time, and coordinate academic tasks efficiently.",
+  achievements: [
+    "Led a team of developers to design and implement backend services using Spring Boot, MySQL, and WebSockets for real-time group chat functionality.",
+    "Developed and integrated REST APIs to support user authentication, course management, group creation, and membership management.",
+    "Implemented frontend interfaces using React, ensuring responsive design, user-friendly interactions, and seamless integration with backend APIs.",
+    "Designed database schemas, optimized queries, and ensured data integrity for user profiles, courses, groups, and chat messages.",
+    "Integrated calendar scheduling and notification modules for upcoming sessions and group invites, improving user engagement.",
+    "Managed end-to-end project workflow, conducted code reviews, and mentored team members on best practices in full-stack development."
+  ],
+  technologies: ["React", "Spring Boot", "MySQL", "WebSockets", "REST API", "Node.js", "JavaScript", "HTML", "CSS"],
+  icon: "Briefcase"
+}
+,
+    {
+      id: 2,
       year: "2024",
-      title: "Intern web developer",
+      title: "Frontend Developer",
       company: " Octanet Services Pvt Ltd",
       type: "experience",
       description: "Developed and maintained multiple client-facing applications with focus on performance and user experience.",
@@ -101,7 +120,7 @@ const CareerTimeline = () => {
       type: "education",
       description: "Completed Bachelor\'s degree with focus on software engineering and web technologies.",
       achievements: [
-        "Pursuing B.Tech in Computer Science – CGPA: 8.1/10",
+        "Pursuing B.Tech in Computer Science – CGPA: 8.16/10",
         "Led final year project on AgroDoc AI – Virtual Agronomist",
         "Active member of coding club and hackathon participant",
         "Completed internship at local tech startup"

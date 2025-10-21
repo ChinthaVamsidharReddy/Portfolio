@@ -7,6 +7,7 @@ import ProjectFilter from './components/ProjectFilter';
 import ProjectModal from './components/ProjectModal';
 import ProjectStats from './components/ProjectStats';
 import FeaturedProject from './components/FeaturedProject';
+import { useNavigate } from 'react-router-dom';
 
 const TechnicalPortfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -15,10 +16,42 @@ const TechnicalPortfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [viewMode, setViewMode] = useState('grid'); // grid or list
 
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/professional-contact-collaboration'); // replace with your target route
+  };
+
   // Mock project data
   const projects = [
     {
-      "id": 1,
+  "id": 1,
+  "title": "Study Group Finder & Collaboration Platform",
+  "category": "Full-Stack Web Application",
+  "description": "A web platform that helps students connect with peers in the same courses to form effective study groups. Users can create profiles, list their courses, discover peers, and collaborate via real-time chat, calendar scheduling, and notifications.",
+  "image": "https://unsplash.com/photos/group-of-people-with-laptops-Hh-PIe3qIug",
+  "technologies": ["React", "Spring Boot", "MySQL", "WebSockets", "REST API", "JavaScript", "HTML", "CSS"],
+  // "metrics": {
+  //   "users": "5K+",
+  //   "uptime": "99.5%",
+  //   "studyGroupsCreated": "500+"
+  // },
+  "status": "In Progress",
+  "demoUrl": null,
+  "githubUrl": "https://github.com/ChinthaVamsidharReddy/Study-Group-Finder-Collaboration-Platform-Group-2",
+  "featured": true,
+  "completionDate": "Oct 2025",
+  "duration": "8 weeks",
+  "teamSize": "4 developers",
+  "problemStatement": "Students needed an online platform to easily discover, join, and collaborate with peers in the same courses, with tools for real-time communication and group coordination.",
+  "technicalApproach": "Backend developed with Spring Boot for APIs and MySQL for database management. WebSockets implemented for real-time group chat. Frontend built with React for responsive UI. Calendar scheduling and notifications integrated for better coordination.",
+  "architecture": "Modular architecture: React frontend, Spring Boot backend, MySQL database, and WebSocket service for real-time messaging.",
+  "outcomes": "Enabled students to create and join study groups efficiently, improved collaboration via real-time chat, and streamlined scheduling and notifications for group activities.",
+  "challenges": "Implementing WebSockets for real-time messaging, synchronizing frontend and backend state, handling concurrent group chat updates, and ensuring database consistency.",
+  "learnings": "Gained hands-on experience in full-stack development, real-time communication, database design, REST API integration, and team leadership."
+},
+    {
+      "id": 2,
       "title": "FlightNest - Flight Booking System",
       "category": "Full-Stack Web Application",
       "description": "FlightNest is a full-stack flight booking and management platform built using Spring Boot for the backend and Angular for the frontend. It provides features like flight search, booking, ticket management, and user authentication.",
@@ -34,7 +67,7 @@ const TechnicalPortfolio = () => {
       "githubUrl": "https://github.com/ChinthaVamsidharReddy/FlightNest",
       "featured": true,
       "completionDate": "Jul 2025",
-      "duration": "6 months",
+      "duration": "3 months",
       "teamSize": "3 developers",
       "problemStatement": "Airlines and customers needed a modern platform for seamless flight booking and real-time ticket management with secure user access.",
       "technicalApproach": "Backend developed with Spring Boot REST APIs and secured with JWT authentication. Angular frontend provides a responsive UI with routing, forms, and modular services. MySQL is used for data persistence.",
@@ -44,7 +77,7 @@ const TechnicalPortfolio = () => {
       "learnings": "Gained experience in full-stack architecture, handling authentication, and deploying enterprise-level applications."
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Student Management System",
       "category": "Web Application",
       "description": "A web-based application for managing academic records, built with Java, JSP, Servlets, and MySQL. Supports student registration, marks entry, attendance tracking, and staff dashboards.",
@@ -70,7 +103,7 @@ const TechnicalPortfolio = () => {
       "learnings": "Deepened knowledge of Java EE stack, database transactions, and role-based access in legacy-style applications."
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Herbal Plant Identifier",
       "category": "Mobile & Cross-Platform App",
       "description": "A cross-platform Flutter app that identifies herbal plants from user-submitted photos using a trained machine learning model. Provides detailed information on each plant and allows users to save favorites.",
@@ -96,7 +129,7 @@ const TechnicalPortfolio = () => {
       "learnings": "Improved Flutter skills and gained hands-on experience in deploying ML models on mobile."
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Educational Website Platform",
       "category": "Full-Stack Web Application",
       "description": "An educational portal offering learning resources, book recommendations, placement prep, and tutorials. Developed using the MERN stack for robust and scalable content delivery.",
@@ -122,7 +155,7 @@ const TechnicalPortfolio = () => {
       "learnings": "Strengthened full-stack JavaScript skills and improved REST API integration with SQL databases."
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "ServiceConnect - On-Demand Service Booking",
       "category": "Web Application",
       "description": "A service aggregation platform that allows users to book home services (electricians, plumbers, etc.) with real-time availability and feedback system.",
@@ -148,7 +181,7 @@ const TechnicalPortfolio = () => {
       "learnings": "Learned to build real-time service platforms and handle dynamic data using MongoDB effectively."
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "AgroDoc AI - Crop Disease Diagnosis",
       "category": "AI-Powered Web Application",
       "description": "AgroDoc AI is an intelligent platform that diagnoses crop diseases using image recognition and provides multilingual care suggestions to farmers.",
@@ -362,6 +395,7 @@ const TechnicalPortfolio = () => {
                 iconName="Calendar"
                 iconPosition="left"
                 className="bg-conversion hover:bg-conversion/90 text-conversion-foreground"
+                onClick={handleClick}
               >
                 Schedule Consultation
               </Button>

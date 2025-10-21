@@ -15,7 +15,6 @@ const HeroSection = () => {
   const [projects, setProjects] = useState([]);
   
   useEffect(() => {
-    // Learning React hooks!
     fetchProjects().then(setProjects);
   }, []);
   
@@ -24,14 +23,11 @@ const HeroSection = () => {
     },
     {
       language: 'JavaScript',
-      code: `// My first REST API
-const express = require('express');
+      code: `const express = require('express');
 const app = express();
 
 app.get('/api/students', (req, res) => {
-  const students = [
-    { name: "Vamsidhar Reddy", major: "Computer Science" }
-  ];
+  const students = [{ name: "Vamsidhar Reddy", major: "CS" }];
   res.json(students);
 });
 
@@ -39,21 +35,16 @@ app.listen(3000);`
     },
     {
       language: 'Java',
-      code: `# Data Structures & Algorithms practice
-      // Data Structures & Algorithms practice
-    import java.util.*;
-    public class Student {
-    public static void main(String[] args) {
-    System.out.println("Vamsidhar Reddy ", "GPA: 8.16", "Skills: Java,
-     Python, React");
-    }
-}
-`
+      code: `import java.util.*;
+public class Student {
+  public static void main(String[] args) {
+    System.out.println("Vamsidhar Reddy | GPA: 8.16 | Skills: Java, React");
+  }
+}`
     },
     {
       language: 'HTML/CSS',
-      code: `<!-- Learning responsive design -->
-<div class="student-card">
+      code: `<div class="student-card">
   <h3>Vamsidhar Reddy</h3>
   <p>Computer Science Student</p>
   <div class="skills">
@@ -72,91 +63,84 @@ app.listen(3000);`
         setIsTyping(true);
       }, 500);
     }, 4000);
-
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-32 h-32 border border-primary/20 rounded-full"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 border border-accent/20 rounded-full"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-secondary/20 rounded-full"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-background/80 to-background">
+      {/* Decorative Circles */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute top-20 left-10 w-24 h-24 sm:w-32 sm:h-32 border border-primary/30 rounded-full"></div>
+        <div className="absolute bottom-20 right-10 w-16 h-16 sm:w-24 sm:h-24 border border-accent/30 rounded-full"></div>
       </div>
 
-      <div className="container mx-auto px-6 lg:px-8 pt-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-                <span className="text-accent font-inter font-medium">Open to internships & entry-level roles</span>
-              </div>
-              
-              <h1 className="text-4xl lg:text-6xl font-poppins font-bold leading-tight">
-                Hi, I'm{' '}
-                <span className="text-gradient">Vamsidhar Reddy</span>
-              </h1>
-              
-              <p className="text-xl lg:text-2xl text-muted-foreground font-inter">
-                Fresh CS graduate ready to launch my tech career
-              </p>
-              
-              <p className="text-lg text-foreground/80 font-inter leading-relaxed max-w-xl">
-                Computer Science graduate passionate about creating innovative web solutions. 
-                I'm eager to contribute to meaningful projects while learning from experienced developers 
-                and growing my skills in a collaborative environment.
-              </p>
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 pt-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          
+          {/* LEFT CONTENT */}
+          <div className="space-y-6 text-center lg:text-left">
+            <div className="flex items-center justify-center lg:justify-start space-x-2">
+              <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+              <span className="text-accent text-sm sm:text-base font-medium">Open to internships & entry-level roles</span>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-  {/* Internal navigation */}
-  <Link to="/technical-portfolio-case-studies">
-    <Button
-      variant="default"
-      size="lg"
-      iconName="Briefcase"
-      iconPosition="left"
-      className="bg-primary hover:bg-primary/90 text-primary-foreground glow-effect"
-    >
-      View My Projects
-    </Button>
-  </Link>
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-poppins font-bold leading-tight">
+              Hi, I'm{' '}
+              <span className="text-gradient">Vamsidhar Reddy</span>
+            </h1>
 
-  {/* External download */}
-  <a
-    href={`./assets/pdf/Vamsidhar_Reddy_Resume.pdf`}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button
-      variant="outline"
-      size="lg"
-      iconName="Download"
-      iconPosition="left"
-      className="border-conversion text-conversion hover:bg-conversion/10"
-    >
-      Download Resume
-    </Button>
-  </a>
-</div>
+            <p className="text-base sm:text-lg lg:text-2xl text-muted-foreground font-inter">
+              Fresh CS graduate ready to launch my tech career
+            </p>
 
+            <p className="text-sm sm:text-base text-foreground/80 font-inter leading-relaxed max-w-xl mx-auto lg:mx-0">
+              Passionate about building modern web applications and learning cutting-edge technologies.
+              Excited to contribute, collaborate, and grow in a real-world environment.
+            </p>
 
-            {/* Quick Stats */}
-            <div className="flex items-center space-x-8 pt-4">
+            {/* CTA BUTTONS */}
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+              <Link to="/technical-portfolio-case-studies">
+                <Button
+                  variant="default"
+                  size="lg"
+                  iconName="Briefcase"
+                  iconPosition="left"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground glow-effect w-full sm:w-auto"
+                >
+                  View My Projects
+                </Button>
+              </Link>
+
+              <a
+                href="./assets/pdf/Vamsidhar_Reddy_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  iconName="Download"
+                  iconPosition="left"
+                  className="border-conversion text-conversion hover:bg-conversion/10 w-full sm:w-auto"
+                >
+                  Download Resume
+                </Button>
+              </a>
+            </div>
+
+            {/* QUICK STATS */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-6 pt-4">
               <div className="text-center">
-                <div className="text-2xl font-poppins font-bold text-primary">Fresh</div>
+                <div className="text-xl sm:text-2xl font-bold text-primary">Fresh</div>
                 <div className="text-sm text-muted-foreground">Graduate 2026</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-poppins font-bold text-accent">12+</div>
+                <div className="text-xl sm:text-2xl font-bold text-accent">12+</div>
                 <div className="text-sm text-muted-foreground">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-poppins font-bold text-secondary">8.16</div>
+                <div className="text-xl sm:text-2xl font-bold text-secondary">8.16</div>
                 <div className="text-sm text-muted-foreground">GPA</div>
               </div>
             </div>
@@ -189,10 +173,10 @@ app.listen(3000);`
               </div>
             </div>
 
-            {/* Animated Code Block */}
-            <div className="code-block relative">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-2">
+            {/* CODE SNIPPET BOX */}
+            <div className="w-full max-w-sm sm:max-w-md md:max-w-lg bg-card p-4 sm:p-6 rounded-xl shadow-lg">
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex space-x-2">
                   <div className="w-3 h-3 bg-error rounded-full"></div>
                   <div className="w-3 h-3 bg-warning rounded-full"></div>
                   <div className="w-3 h-3 bg-success rounded-full"></div>
@@ -201,29 +185,21 @@ app.listen(3000);`
                   {codeSnippets[currentCodeIndex].language}
                 </span>
               </div>
-              
-              <pre className={`text-sm font-jetbrains leading-relaxed transition-opacity duration-500 ${
-                isTyping ? 'opacity-100' : 'opacity-50'
-              }`}>
+              <pre className={`text-xs sm:text-sm font-jetbrains leading-relaxed whitespace-pre-wrap transition-opacity duration-500 ${isTyping ? 'opacity-100' : 'opacity-50'}`}>
                 <code className="text-foreground">
                   {codeSnippets[currentCodeIndex].code}
                 </code>
               </pre>
-              
-              {/* Typing Cursor */}
-              <div className="absolute bottom-4 right-4">
-                <div className="w-2 h-4 bg-primary animate-pulse"></div>
-              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* SCROLL INDICATOR */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="flex flex-col items-center space-y-2 animate-bounce">
+        <div className="flex flex-col items-center space-y-1 animate-bounce">
           <span className="text-xs text-muted-foreground font-inter">Scroll to explore</span>
-          <Icon name="ChevronDown" size={20} className="text-primary" />
+          <Icon name="ChevronDown" size={18} className="text-primary" />
         </div>
       </div>
     </section>

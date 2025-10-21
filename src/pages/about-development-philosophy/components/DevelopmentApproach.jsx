@@ -9,7 +9,7 @@ const DevelopmentApproach = () => {
       id: 0,
       title: "User-Centric Design",
       icon: "Users",
-      description: "Every technical decision starts with understanding the end user\'s needs and pain points.",
+      description: "Every technical decision starts with understanding the end user's needs and pain points.",
       details: [
         "Conduct thorough user research before writing any code",
         "Create user personas and journey maps to guide development",
@@ -61,53 +61,68 @@ const DevelopmentApproach = () => {
 
   const getColorClasses = (color, isActive = false) => {
     const colors = {
-      primary: isActive ? 'bg-primary text-primary-foreground' : 'text-primary bg-primary/10 hover:bg-primary/20',
-      accent: isActive ? 'bg-accent text-accent-foreground' : 'text-accent bg-accent/10 hover:bg-accent/20',
-      secondary: isActive ? 'bg-secondary text-secondary-foreground' : 'text-secondary bg-secondary/10 hover:bg-secondary/20',
-      conversion: isActive ? 'bg-conversion text-conversion-foreground' : 'text-conversion bg-conversion/10 hover:bg-conversion/20'
+      primary: isActive
+        ? 'bg-primary text-primary-foreground'
+        : 'text-primary bg-primary/10 hover:bg-primary/20',
+      accent: isActive
+        ? 'bg-accent text-accent-foreground'
+        : 'text-accent bg-accent/10 hover:bg-accent/20',
+      secondary: isActive
+        ? 'bg-secondary text-secondary-foreground'
+        : 'text-secondary bg-secondary/10 hover:bg-secondary/20',
+      conversion: isActive
+        ? 'bg-conversion text-conversion-foreground'
+        : 'text-conversion bg-conversion/10 hover:bg-conversion/20'
     };
     return colors[color] || colors.primary;
   };
 
   return (
-    <section className="py-20 bg-card/30">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-poppins font-bold mb-4">
+    <section className="py-16 sm:py-20 bg-card/30">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-poppins font-bold mb-3 sm:mb-4">
             Development <span className="text-gradient">Approach</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-2">
             My methodology combines technical excellence with human-centered thinking to create solutions that truly matter.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Approach Navigation */}
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start">
+          {/* Approach List */}
           <div className="space-y-4">
             {approaches.map((approach, index) => (
               <div
                 key={approach.id}
-                className={`p-6 rounded-xl border transition-all duration-300 cursor-pointer ${
+                className={`p-5 sm:p-6 rounded-xl border transition-all duration-300 cursor-pointer ${
                   activeApproach === index
-                    ? 'border-primary bg-primary/5 glow-effect' :'border-border bg-card hover:border-primary/50'
+                    ? 'border-primary bg-primary/5 glow-effect'
+                    : 'border-border bg-card hover:border-primary/50'
                 }`}
                 onClick={() => setActiveApproach(index)}
               >
                 <div className="flex items-start space-x-4">
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300 ${
-                    getColorClasses(approach.color, activeApproach === index)
-                  }`}>
-                    <Icon name={approach.icon} size={24} />
+                  <div
+                    className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center transition-all duration-300 ${
+                      getColorClasses(approach.color, activeApproach === index)
+                    }`}
+                  >
+                    <Icon name={approach.icon} size={22} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-poppins font-semibold mb-2">{approach.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+                    <h3 className="text-base sm:text-lg font-poppins font-semibold mb-1 sm:mb-2">
+                      {approach.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                       {approach.description}
                     </p>
                   </div>
-                  <Icon 
-                    name="ChevronRight" 
-                    size={20} 
+                  <Icon
+                    name="ChevronRight"
+                    size={18}
                     className={`text-muted-foreground transition-transform duration-300 ${
                       activeApproach === index ? 'rotate-90' : ''
                     }`}
@@ -117,56 +132,72 @@ const DevelopmentApproach = () => {
             ))}
           </div>
 
-          {/* Detailed Content */}
-          <div className="lg:sticky lg:top-8">
-            <div className="bg-card border border-border rounded-2xl p-8">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className={`w-16 h-16 rounded-xl flex items-center justify-center ${
-                  getColorClasses(approaches[activeApproach].color, true)
-                }`}>
-                  <Icon name={approaches[activeApproach].icon} size={28} />
+          {/* Details Panel */}
+          <div className="mt-8 lg:mt-0 lg:sticky lg:top-8">
+            <div className="bg-card border border-border rounded-2xl p-6 sm:p-8">
+              {/* Header */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-6">
+                <div
+                  className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-0 ${
+                    getColorClasses(approaches[activeApproach].color, true)
+                  }`}
+                >
+                  <Icon name={approaches[activeApproach].icon} size={26} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-poppins font-bold">
+                  <h3 className="text-xl sm:text-2xl font-poppins font-bold">
                     {approaches[activeApproach].title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground text-sm sm:text-base">
                     {approaches[activeApproach].description}
                   </p>
                 </div>
               </div>
 
+              {/* Strategy */}
               <div className="space-y-4">
-                <h4 className="text-lg font-poppins font-semibold">Implementation Strategy:</h4>
+                <h4 className="text-base sm:text-lg font-poppins font-semibold">
+                  Implementation Strategy:
+                </h4>
                 <ul className="space-y-3">
                   {approaches[activeApproach].details.map((detail, index) => (
                     <li key={index} className="flex items-start space-x-3">
-                      <div className={`w-6 h-6 rounded-full flex items-center justify-center mt-0.5 ${
-                        getColorClasses(approaches[activeApproach].color)
-                      }`}>
-                        <Icon name="Check" size={14} />
+                      <div
+                        className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center mt-0.5 ${
+                          getColorClasses(approaches[activeApproach].color)
+                        }`}
+                      >
+                        <Icon name="Check" size={12} />
                       </div>
-                      <span className="text-muted-foreground leading-relaxed">{detail}</span>
+                      <span className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                        {detail}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* Process Flow */}
-              <div className="mt-8 pt-6 border-t border-border">
-                <h4 className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wide">
+              <div className="mt-8 pt-6 border-t border-border overflow-x-auto">
+                <h4 className="text-xs sm:text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wide">
                   Process Flow
                 </h4>
-                <div className="flex items-center space-x-2 text-sm">
+                <div className="flex items-center space-x-2 text-xs sm:text-sm min-w-max">
                   {['Research', 'Plan', 'Build', 'Test', 'Deploy', 'Iterate'].map((step, index) => (
                     <React.Fragment key={step}>
-                      <span className={`px-3 py-1 rounded-full ${
-                        getColorClasses(approaches[activeApproach].color)
-                      }`}>
+                      <span
+                        className={`px-3 py-1 rounded-full whitespace-nowrap ${
+                          getColorClasses(approaches[activeApproach].color)
+                        }`}
+                      >
                         {step}
                       </span>
                       {index < 5 && (
-                        <Icon name="ArrowRight" size={16} className="text-muted-foreground" />
+                        <Icon
+                          name="ArrowRight"
+                          size={14}
+                          className="text-muted-foreground flex-shrink-0"
+                        />
                       )}
                     </React.Fragment>
                   ))}
