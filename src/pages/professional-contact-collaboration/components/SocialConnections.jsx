@@ -24,7 +24,7 @@ const SocialConnections = () => {
       name: 'LinkedIn',
       username: 'Vamsidhar Reddy',
       description: 'Professional network and industry insights',
-      url: 'https://www.linkedin.com/in/chintha-vamsidhar-reddy/',
+      url: 'https://www.linkedin.com/in/c-vamsidharreddy//',
       icon: 'Linkedin',
       color: 'text-secondary',
       bgColor: 'bg-secondary/10',

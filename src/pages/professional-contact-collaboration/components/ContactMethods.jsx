@@ -20,7 +20,7 @@ const ContactMethods = () => {
       title: 'LinkedIn Professional',
       description: 'Connect for networking and professional opportunities',
       value: 'linkedin.com/in/vamsidhar-reddy',
-      action: 'https://www.linkedin.com/in/chintha-vamsidhar-reddy/',
+      action: 'https://www.linkedin.com/in/c-vamsidharreddy/',
       icon: 'Linkedin',
       color: 'text-secondary',
       bgColor: 'bg-secondary/10',

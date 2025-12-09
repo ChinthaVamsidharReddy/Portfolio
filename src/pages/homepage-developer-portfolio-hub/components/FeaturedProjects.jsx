@@ -44,11 +44,11 @@ const FeaturedProjects = () => {
       image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop",
       techStack: ["Flutter", "Python", "TensorFlow Lite", "Firebase", "SQLite"],
       metrics: {
-        grade: "IBM Project",
+        grade: "Final year Project",
         github: "Public",
       },
       githubUrl: "https://github.com/ChinthaVamsidharReddy/Herbal-Plant-Identifier",
-      category: "IBM Project",
+      category: "Final year Project",
       featured: true,
     },
     {

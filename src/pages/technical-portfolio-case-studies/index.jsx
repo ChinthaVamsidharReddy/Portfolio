@@ -36,7 +36,7 @@ const TechnicalPortfolio = () => {
   //   "uptime": "99.5%",
   //   "studyGroupsCreated": "500+"
   // },
-  "status": "In Progress",
+  "status": "Completed",
   "demoUrl": null,
   "githubUrl": "https://github.com/ChinthaVamsidharReddy/Study-Group-Finder-Collaboration-Platform-Group-2",
   "featured": true,
@@ -58,8 +58,8 @@ const TechnicalPortfolio = () => {
       "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop",
       "technologies": ["Spring Boot", "Angular", "MySQL", "JWT", "REST API","Java"],
       "metrics": {
-        "users": "10K+",
-        "uptime": "99.9%",
+        // "users": "10K+",
+        // "uptime": "99.9%",
         "bookingsHandled": "25K+"
       },
       "status": "Completed",
@@ -86,7 +86,7 @@ const TechnicalPortfolio = () => {
       "metrics": {
         "institutes": "15+",
         "recordsManaged": "100K+",
-        "uptime": "99.5%"
+        // "uptime": "99.5%"
       },
       "status": "Completed",
       "demoUrl": null,
@@ -110,7 +110,7 @@ const TechnicalPortfolio = () => {
       "image": "assets/images/istockphoto-1030030506-1024x1024.jpg",
       "technologies": ["Flutter", "Dart", "TensorFlow Lite", "Firebase", "SQLite"],
       "metrics": {
-        "downloads": "1K+",
+        // "downloads": "1K+",
         "plantsIdentified": "50+ species",
         "rating": "4.7/5"
       },
@@ -136,7 +136,7 @@ const TechnicalPortfolio = () => {
       "image": "assets/images/istockphoto-1290864946-1024x1024.jpg",
       "technologies": ["React", "Node.js", "Express.js", "MySQL", "REST API"],
       "metrics": {
-        "users": "5K+",
+        // "users": "5K+",
         "resourcesAvailable": "300+",
         "dailyVisits": "1k+"
       },
@@ -162,7 +162,7 @@ const TechnicalPortfolio = () => {
       "image": "/assets/images/piggybank-5kbpPlclIy4-unsplash.jpg",
       "technologies": ["React", "Node.js", "MongoDB", "Express.js", "JWT"],
       "metrics": {
-        "users": "3K+",
+        // "users": "3K+",
         "servicesBooked": "8K+",
         "vendorsOnboarded": "200+"
       },
@@ -205,7 +205,33 @@ const TechnicalPortfolio = () => {
       "outcomes": "Enabled early disease detection, increased crop yield confidence, and extended accessibility through native languages.",
       "challenges": "Training accurate CNNs for diverse crop conditions and integrating offline-first multilingual support.",
       "learnings": "Developed skills in computer vision, AI model deployment, and building inclusive tools for underserved communities."
-    }
+    },
+    {
+    "id": 8,
+    "title": "Frontal Face, Eye Pattern & Emotion Recognition",
+    "category": "AI / Computer Vision",
+    "description": "A computer vision-based system that detects frontal faces, identifies eye patterns, and recognizes human emotions in images using OpenCV and DeepFace. Useful for security, emotion analytics, and intelligent vision applications.",
+    "image": "assets/images/emotion-detection-abstract-concept-illustration-speech-emotional-state-recognition-emotion-detection.png",
+    "technologies": ["Python", "OpenCV", "DeepFace", "Matplotlib", "Machine Learning"],
+    "metrics": {
+      "facesDetected": "1000+",
+      "emotionAccuracy": "85%+"
+    },
+    "status": "Completed",
+    "demoUrl": null,
+    "githubUrl": "https://github.com/chinthavamsidharreddy/Frontal-Face-and-Eye-Pattern-Recognition-in-Images",
+    "featured": false,
+    "completionDate": "January 2025",
+    "duration": "2 weeks",
+    "teamSize": "1 developer",
+    "problemStatement": "Traditional monitoring systems only track objects but lack the capability to understand human emotions or detailed face patterns in images, limiting analytics and automation potential.",
+    "technicalApproach": "Implemented Haar cascade classifiers for face and eye detection using OpenCV. Integrated DeepFace to perform emotion analysis on detected facial regions. Added visualization layers with bounding boxes and labels to display detection results.",
+    "architecture": "Single-script image processing pipeline where OpenCV handles detection, DeepFace handles emotion classification, and Matplotlib is used for result visualization.",
+    "outcomes": "Successfully identified faces, eyes, and emotions from static images with high reliability. Enhanced understanding of real-world vision tasks like feature extraction and emotion modeling.",
+    "challenges": "Handling false positives in eye detection, managing varying lighting conditions in images, and optimizing DeepFace inference time.",
+    "learnings": "Gained hands-on expertise with Haar cascades, emotion recognition models, OpenCV image preprocessing, and end-to-end vision pipeline development."
+}
+
   ];
 
   // Extract unique categories and technologies

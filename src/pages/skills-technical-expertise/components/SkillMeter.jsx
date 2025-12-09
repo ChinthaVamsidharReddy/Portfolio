@@ -15,11 +15,14 @@ const SkillMeter = ({ skill, delay = 0 }) => {
   }, [skill.proficiency, delay]);
 
   const getProgressColor = (level) => {
-    if (level >= 90) return 'from-accent to-primary';
-    if (level >= 75) return 'from-primary to-secondary';
-    if (level >= 60) return 'from-secondary to-accent';
-    return 'from-muted to-primary';
-  };
+  if (level >= 90) return 'from-blue-500 to-indigo-600';       // Expert
+  if (level >= 85) return 'from-teal-400 to-blue-500';         // Strong
+  if (level >= 80) return 'from-green-400 to-teal-500';        // Very Good
+  if (level >= 75) return 'from-yellow-400 to-orange-500';     // Moderate
+  if (level >= 60) return 'from-orange-400 to-red-500';        // Basic
+  return 'from-gray-400 to-red-500';                           // Needs work
+};
+
 
   return (
     <div className={`group p-6 bg-card border border-border rounded-xl hover:border-primary/30 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>

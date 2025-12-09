@@ -15,10 +15,10 @@ const HeroSection = () => {
           {/* Content Side */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+              {/* <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
                 <Icon name="Code" size={16} />
                 <span>Full-Stack Developer</span>
-              </div>
+              </div> */}
               
               <h1 className="text-4xl lg:text-6xl font-poppins font-bold leading-tight">
                 Hi, I'm{' '}
@@ -66,12 +66,14 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative z-10">
               <div className="aspect-square max-w-md mx-auto relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl rotate-6"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-10xl rotate-6"></div>
                 <div className="relative bg-card border border-border rounded-3xl overflow-hidden glow-effect">
                   <Image
-                    src="assets\images\vamsi.jpg"
+                    src="assets\images\vamsiside.png"
                     alt="Vamsidhar Reddy - Full Stack Developer"
-                    className="w-full h-full object-cover"
+                    // className="w-full h-full object-cover"
+                    className="w-100 h-120 mx-auto relative"
+
                   />
                   
                   {/* Overlay with tech elements */}
@@ -80,7 +82,7 @@ const HeroSection = () => {
                   {/* Floating tech badges */}
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="flex flex-wrap gap-2">
-                      {['React', 'Node.js', 'SpringBoot'].map((tech) => (
+                      {['React', 'Node.js', 'SpringBoot','Hibernate','MYSQL'].map((tech) => (
                         <span
                           key={tech}
                           className="px-3 py-1 bg-primary/20 text-primary text-xs font-medium rounded-full backdrop-blur-sm"
@@ -96,7 +98,7 @@ const HeroSection = () => {
 
             {/* Floating elements */}
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-secondary/20 rounded-2xl rotate-12 floating-badge"></div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-accent/20 rounded-xl -rotate-12 floating-badge animation-delay-200"></div>
+            <div className="absolute -bottom-4 -left-10 w-16 h-16 bg-accent/20 rounded-xl -rotate-12 floating-badge animation-delay-200"></div>
           </div>
         </div>
       </div>

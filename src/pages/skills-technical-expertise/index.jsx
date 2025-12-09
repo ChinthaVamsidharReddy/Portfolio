@@ -27,24 +27,12 @@ const SkillsTechnicalExpertise = () => {
       category: "Frontend Framework",
       proficiency: 80,
       level: "Expert",
-      experience: "6+ Months",
-      projects: 3,
+      experience: "1+ years",
+      projects: 4,
       lastUsed: "Currently",
       icon: "Code",
       description: "Advanced React development with hooks, context, performance optimization, and modern patterns. Extensive experience with React 18 features including concurrent rendering and Suspense.",
       tools: ["React 18", "Next.js", "Vite", "React Router", "Redux Toolkit"]
-    },
-    {
-      name: "Node.js",
-      category: "Backend Runtime",
-      proficiency: 90,
-      level: "Expert",
-      experience: "1+ years",
-      projects: 3,
-      lastUsed: "This week",
-      icon: "Server",
-      description: "Full-stack Node.js development with Express, API design, microservices architecture, and performance optimization. Experience with both REST and GraphQL APIs.",
-      tools: ["Express.js", "Fastify", "Socket.io", "JWT", "Passport.js"]
     },
     {
       name: "Java",
@@ -58,6 +46,30 @@ const SkillsTechnicalExpertise = () => {
       description: "Robust development using core and advanced Java features including generics, annotations, and strong static typing. Experienced in building scalable, enterprise-level applications with emphasis on type safety and maintainability.",
       tools: ["JDK", "Spring Boot", "Lombok", "JPA", "Maven", "Hibernate"]
 
+    },
+    {
+  name: "Spring Boot",
+  category: "Backend Framework",
+  proficiency: 88,
+  level: "Advanced",
+  experience: "2+ years",
+  projects: 6,
+  lastUsed: "Daily",
+  icon: "Layers",
+  description: "Enterprise-grade backend development with Spring Boot, including REST APIs, dependency injection, JPA, microservices, and production-ready application design.",
+  tools: ["Spring MVC", "Spring Security", "JPA/Hibernate", "Maven", "Postman"]
+},
+    {
+      name: "Node.js",
+      category: "Backend Runtime",
+      proficiency: 90,
+      level: "Expert",
+      experience: "1+ years",
+      projects: 3,
+      lastUsed: "This week",
+      icon: "Server",
+      description: "Full-stack Node.js development with Express, API design, microservices architecture, and performance optimization. Experience with both REST and GraphQL APIs.",
+      tools: ["Express.js", "Fastify", "Socket.io", "JWT", "Passport.js"]
     },
     {
       name: "MYSQL",
@@ -86,6 +98,94 @@ const SkillsTechnicalExpertise = () => {
 
 
     },
+    
+{
+  name: "MongoDB",
+  category: "NoSQL Database",
+  proficiency: 82,
+  level: "Advanced",
+  experience: "1+ years",
+  projects: 8,
+  lastUsed: "Currently",
+  icon: "Database",
+  description: "Document-based data modeling, aggregation pipelines, indexing optimization, and building scalable NoSQL database architectures for real-time applications.",
+  tools: ["MongoDB Atlas", "Mongoose", "Compass", "Aggregation Framework"]
+},
+{
+  name: "Firebase",
+  category: "Cloud Backend",
+  proficiency: 78,
+  level: "Intermediate",
+  experience: "1+ years",
+  projects: 5,
+  lastUsed: "This week",
+  icon: "Cloud",
+  description: "Cloud-based development using Firebase Authentication, Firestore, Hosting, and Storage. Implemented user auth flows, real-time updates, and integrated Firebase into web and mobile apps.",
+  tools: ["Firestore", "Firebase Auth", "Firebase Hosting", "Cloud Functions"]
+},
+{
+  name: "AI/ML Integration",
+  category: "Artificial Intelligence",
+  proficiency: 80,
+  level: "Advanced",
+  experience: "1+ years",
+  projects: 4,
+  lastUsed: "Currently",
+  icon: "Brain",
+  description: "Integration of ML models into production systems, including TFLite deployment, OpenAI API usage, vision models, and real-time inference for mobile and web applications.",
+  tools: ["TensorFlow Lite", "OpenAI API", "Python", "NumPy", "Pillow"]
+},
+{
+  name: "JSP & Servlets",
+  category: "Backend Web Technology",
+  proficiency: 84,
+  level: "Advanced",
+  experience: "2+ years",
+  projects: 10,
+  lastUsed: "This month",
+  icon: "Globe",
+  description: "Strong backend development with JSP, Servlets, MVC, JDBC, and session management. Built enterprise modules including attendance systems, marks entry, and authentication flows.",
+  tools: ["JSP", "Servlets", "JDBC", "Tomcat"]
+},
+{
+  name: "Git & GitHub",
+  category: "Version Control",
+  proficiency: 90,
+  level: "Expert",
+  experience: "3+ years",
+  projects: "40+",
+  lastUsed: "Daily",
+  icon: "GitBranch",
+  description: "Version control expertise including branching strategies, pull requests, conflict resolution, release management, and collaborative development workflows.",
+  tools: ["Git", "GitHub", "Git CLI", "GitHub Actions"]
+},
+{
+  name: "REST API Design",
+  category: "Backend Development",
+  proficiency: 88,
+  level: "Expert",
+  experience: "2+ years",
+  projects: "20+",
+  lastUsed: "Daily",
+  icon: "Api",
+  description: "Design and development of scalable REST APIs with best practices, authentication, rate limiting, and performance-focused architecture.",
+  tools: ["Postman", "Swagger", "JWT", "OAuth2"]
+},
+{
+  name: "System Design",
+  category: "Architecture",
+  proficiency: 75,
+  level: "Intermediate",
+  experience: "1 year",
+  projects: 3,
+  lastUsed: "Currently",
+  icon: "Server",
+  description: "Understanding of scalable architectures, load balancing, caching, queues, database sharding, microservices, and distributed system design principles.",
+  tools: ["Kafka", "Redis", "Nginx", "Microservices"]
+}
+
+
+
   ];
 
   // Mock data for code playgrounds
@@ -125,12 +225,146 @@ const SkillsTechnicalExpertise = () => {
         }
       ],
       concepts: ["Middleware", "JWT Authentication", "Rate Limiting", "Error Handling"]
-    }
+    },
+    {
+    title: "React Form Validation",
+    description: "Controlled inputs with reusable validation logic",
+    icon: "Edit3",
+    examples: [
+      {
+        name: "useForm",
+        filename: "useForm.js",
+        code: `import { useState } from 'react';
+
+const useForm = (initialValues = {}, validate = () => ({})) => {
+  const [values, setValues] = useState(initialValues);
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    const nextValues = { ...values, [name]: value };
+    setValues(nextValues);
+    setErrors(validate(nextValues));
+  };
+
+  const reset = () => {
+    setValues(initialValues);
+    setErrors({});
+  };
+
+  return { values, errors, handleChange, reset };
+};
+
+export default useForm;`,
+        output:
+          "// Usage: const { values, errors, handleChange } = useForm(initialValues, validate);"
+      }
+    ],
+    concepts: ["Controlled Components", "Form Handling", "Validation", "Reusable Hooks"]
+  },
+
+  {
+    title: "Prisma Data Access Layer",
+    description: "Type-safe database access with Prisma",
+    icon: "Database",
+    examples: [
+      {
+        name: "User Repository",
+        filename: "userRepository.ts",
+        code: `import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
+
+export const createUser = async (data) => {
+  return prisma.user.create({ data });
+};
+
+export const findUserByEmail = async (email) => {
+  return prisma.user.findUnique({
+  where: { email }
+  });
+};
+
+export const listUsers = async () => {
+  return prisma.user.findMany({
+    orderBy: { createdAt: 'desc' }
+  });
+};`,
+        output: "// Reusable functions for user CRUD operations with Prisma"
+      }
+    ],
+    concepts: ["Prisma Client", "Repository Pattern", "Type-safe Queries", "CRUD"]
+  },
+
+  {
+    title: "Spring Boot REST APIs",
+    description: "Java REST controllers for backend services",
+    icon: "Coffee",
+    examples: [
+      {
+        name: "Flight Controller",
+        filename: "FlightController.java",
+        code: `@RestController
+@RequestMapping("/api/flights")
+@RequiredArgsConstructor
+public class FlightController {
+
+  private final FlightService flightService;
+
+  @GetMapping
+  public List<FlightDto> getAllFlights() {
+    return flightService.getAllFlights();
+  }
+
+  @PostMapping
+  public ResponseEntity<FlightDto> createFlight(
+      @RequestBody @Valid CreateFlightRequest request
+  ) {
+    FlightDto created = flightService.createFlight(request);
+    return ResponseEntity.status(HttpStatus.CREATED).body(created);
+  }
+}`,
+        output: "// REST endpoints for listing and creating flights in FlightNest"
+      }
+    ],
+    concepts: ["REST Controller", "DTOs", "Validation", "Spring Boot", "Service Layer"]
+  }
   ];
 
   // Mock data for technology timeline
   const technologyTimeline = [
     {
+  year: "2025",
+  milestone: "Face Emotion Recognition",
+  context: "A computer vision project focused on detecting faces, eyes, and human emotions using classical image processing and deep learning techniques.",
+  technologies: [
+    { name: "Python", icon: "Code" },
+    { name: "OpenCV", icon: "Terminal" },
+    { name: "DeepFace", icon: "Human" },
+    { name: "NumPy", icon: "Library" },
+    { name: "Matplotlib", icon: "Library" },
+    { name: "Haar Cascade Classifiers", icon: "Library" }
+  ],
+  achievements: [
+     "Frontal face detection using Haar Cascade classifier",
+    "Eye pattern recognition inside detected face region",
+    "Emotion recognition using DeepFace (happy, sad, angry, neutral, etc.)",
+    "Bounding box visualization for faces and eyes",
+    "Emotion tag overlay on processed images"
+  ],
+  resources: [`OpenCV Haar Cascade documentation, DeepFace emotion recognition guides, and Python image processing tutorials.`],
+      projects: [
+        {
+          name: "Face Emotion Recognition",
+          description: "AI-powered computer vision system for detecting faces, eyes, and emotions using OpenCV and DeepFace."
+        },
+        // {
+        //   name: "Analytics Dashboard",
+        //   description: "Complex data visualization with real-time charts and filtering"
+        // }
+      ]
+    },
+        {
   year: "2025",
   milestone: "Full-Stack Mastery",
   context: "Advanced Angular architecture and scalable Node.js backend development",
@@ -317,130 +551,212 @@ const SkillsTechnicalExpertise = () => {
 
   // Mock data for skill categories
   const skillCategories = [
-    {
-      name: "Frontend Development",
-      description: "User interface and experience technologies",
-      icon: "Monitor",
-      gradient: "from-primary to-accent",
-      skills: [
-        {
-          name: "React.js",
-          version: "v18.2+",
-          proficiency: "Expert",
-          experience: "6+ Months",
-          icon: "Code",
-          projects: ["Booking Platform", "Analytics Dashboard", "Task Manager"],
-          tools: ["Next.js", "Vite", "React Router", "Redux Toolkit"]
-        },
-        {
-          name: "TypeScript",
-          version: "v5.0+",
-          proficiency: "Advanced",
-          experience: "6+ Months",
-          icon: "FileCode",
-          projects: ["Type-safe APIs", "Component Libraries", "Large Applications"],
-          tools: ["TSC", "ESLint", "Prettier", "Type Guards"]
-        },
-        {
-          name: "Tailwind CSS",
-          version: "v3.4+",
-          proficiency: "Expert",
-          experience: "6+ Months",
-          icon: "Palette",
-          projects: ["Responsive Designs", "Component Systems", "Design Systems"],
-          tools: ["PostCSS", "Headless UI", "Tailwind UI", "Custom Plugins"]
-        },
-        {
-          name: "Next.js",
-          version: "v14+",
-          proficiency: "Advanced",
-          experience: "3+ Months",
-          icon: "Globe",
-          projects: ["SSR Applications", "Static Sites", "API Routes"],
-          tools: ["App Router", "Server Components", "Middleware", "Edge Runtime"]
-        }
-      ]
-    },
-    {
-      name: "Backend Architecture",
-      description: "Server-side development and API design",
-      icon: "Server",
-      gradient: "from-secondary to-primary",
-      skills: [
-        {
-          name: "Node.js",
-          version: "v20+",
-          proficiency: "Expert",
-          experience: "1+ years",
-          icon: "Server",
-          projects: ["RESTful APIs", "Microservices", "Real-time Apps"],
-          tools: ["Express.js", "Fastify", "Socket.io", "Cluster"]
-        },
-        {
-          name: "Express.js",
-          version: "v4.18+",
-          proficiency: "Expert",
-          experience: "1+ years",
-          icon: "Globe",
-          projects: ["Web APIs", "Middleware Systems", "Authentication"],
-          tools: ["Helmet", "CORS", "Morgan", "Compression"]
-        },
-        {
-          name: "Java & Spring Boot",
-          version: "Java 17 / Spring Boot 3",
-          proficiency: "Advanced",
-          experience: "2+ years",
-          icon: "Coffee",
-          projects: ["FlightNest Booking System", "Student Management System"],
-          tools: ["Spring Security", "Spring Data JPA", "JWT", "Hibernate", "Lombok", "Maven", "Postman"]
-        },
-        {
-          name: "Python",
-          version: "v3.11+",
-          proficiency: "Intermediate",
-          experience: "1+ years",
-          icon: "Code",
-          projects: ["Data Processing", "API Development", "Automation Scripts"],
-          tools: ["FastAPI", "Django", "Pandas", "NumPy"]
-        }
-      ]
-    },
-    {
-      name: "Database Management",
-      description: "Data storage and retrieval systems",
-      icon: "Database",
-      gradient: "from-accent to-secondary",
-      skills: [
-  
-        {
-          name: "MongoDB",
-          version: "v7+",
-          proficiency: "Advanced",
-          experience: "2+ years",
-          icon: "Database",
-          projects: ["Document Stores", "Aggregation Pipelines", "Indexing"],
-          tools: ["Mongoose", "MongoDB Compass", "Atlas", "Aggregation"]
-        },
-        {
-          name: "MySQL",
-          version: "v8+",
-          proficiency: "Advanced",
-          experience: "1+ years",
-          icon: "Table",
-          projects: ["Relational Data Modeling", "Query Optimization", "Database Migrations"],
-          tools: ["MySQL Workbench", "phpMyAdmin", "JDBC", "Flyway"]
-        },
-        {
-          name: "Prisma",
-          version: "v5+",
-          proficiency: "Advanced",
-          experience: "2+ years",
-          icon: "Database",
-          projects: ["Type-safe Queries", "Schema Management", "Migrations"],
-          tools: ["Prisma Studio", "Prisma Client", "Schema", "Migrate"]
-        }
-      ]
-    }
+  {
+    name: "Frontend Development",
+    description: "User interface and experience technologies",
+    icon: "Monitor",
+    gradient: "from-primary to-accent",
+    skills: [
+      {
+        name: "React.js",
+        version: "v18.2+",
+        proficiency: "Expert",
+        experience: "6+ Months",
+        icon: "Code",
+        projects: ["Booking Platform", "Analytics Dashboard", "Task Manager"],
+        tools: ["Next.js", "Vite", "React Router", "Redux Toolkit"]
+      },
+      {
+        name: "TypeScript",
+        version: "v5.0+",
+        proficiency: "Advanced",
+        experience: "6+ Months",
+        icon: "FileCode",
+        projects: ["Type-safe APIs", "Component Libraries", "Large Applications"],
+        tools: ["TSC", "ESLint", "Prettier", "Type Guards"]
+      },
+      {
+        name: "Tailwind CSS",
+        version: "v3.4+",
+        proficiency: "Expert",
+        experience: "6+ Months",
+        icon: "Palette",
+        projects: ["Responsive Designs", "Component Systems", "Design Systems"],
+        tools: ["PostCSS", "Headless UI", "Tailwind UI", "Custom Plugins"]
+      },
+      {
+        name: "Next.js",
+        version: "v14+",
+        proficiency: "Advanced",
+        experience: "3+ Months",
+        icon: "Globe",
+        projects: ["SSR Applications", "Static Sites", "API Routes"],
+        tools: ["App Router", "Server Components", "Middleware", "Edge Runtime"]
+      },
+      // 🔥 Added: core web skills you actually use
+      {
+        name: "JavaScript (ES6+)",
+        version: "ES2020+",
+        proficiency: "Advanced",
+        experience: "2+ years",
+        icon: "Brackets",
+        projects: ["Interactive UIs", "Form Validation", "Dynamic Components"],
+        tools: ["Fetch API", "Async/Await", "ES Modules", "Browser APIs"]
+      },
+      {
+        name: "HTML5 & CSS3",
+        version: "HTML5 / CSS3",
+        proficiency: "Expert",
+        experience: "2+ years",
+        icon: "LayoutTemplate",
+        projects: ["Landing Pages", "Portfolio Website", "Responsive Layouts"],
+        tools: ["Flexbox", "CSS Grid", "Media Queries", "Semantic HTML"]
+      },
+      {
+        name: "UI Libraries & Animations",
+        version: "Modern",
+        proficiency: "Intermediate",
+        experience: "1+ years",
+        icon: "Sparkles",
+        projects: ["Marketing Sections", "Dashboard Interactions"],
+        tools: ["Framer Motion", "Shadcn UI", "Radix UI", "Icon Libraries"]
+      }
+    ]
+  },
+  {
+    name: "Backend Architecture",
+    description: "Server-side development and API design",
+    icon: "Server",
+    gradient: "from-secondary to-primary",
+    skills: [
+      {
+        name: "Node.js",
+        version: "v20+",
+        proficiency: "Expert",
+        experience: "1+ years",
+        icon: "Server",
+        projects: ["RESTful APIs", "Microservices", "Real-time Apps"],
+        tools: ["Express.js", "Fastify", "Socket.io", "Cluster"]
+      },
+      {
+        name: "Express.js",
+        version: "v4.18+",
+        proficiency: "Expert",
+        experience: "1+ years",
+        icon: "Globe",
+        projects: ["Web APIs", "Middleware Systems", "Authentication"],
+        tools: ["Helmet", "CORS", "Morgan", "Compression"]
+      },
+      {
+        name: "Java & Spring Boot",
+        version: "Java 17 / Spring Boot 3",
+        proficiency: "Advanced",
+        experience: "2+ years",
+        icon: "Coffee",
+        projects: ["FlightNest Booking System", "Student Management System"],
+        tools: [
+          "Spring Security",
+          "Spring Data JPA",
+          "JWT",
+          "Hibernate",
+          "Lombok",
+          "Maven",
+          "Postman"
+        ]
+      },
+      {
+        name: "Python",
+        version: "v3.11+",
+        proficiency: "Intermediate",
+        experience: "1+ years",
+        icon: "Code",
+        projects: ["Data Processing", "API Development", "Automation Scripts"],
+        tools: ["FastAPI", "Django", "Pandas", "NumPy"]
+      },
+      // 🔥 Added: your Java web stack
+      {
+        name: "JSP & Servlets",
+        version: "Jakarta EE",
+        proficiency: "Advanced",
+        experience: "1+ years",
+        icon: "Globe",
+        projects: ["Online Voting System", "E-commerce Platform", "Student Portal"],
+        tools: ["JDBC", "JSTL", "Servlet Filters", "Tomcat"]
+      },
+      {
+        name: "REST API Design & Security",
+        version: "REST v2",
+        proficiency: "Advanced",
+        experience: "2+ years",
+        icon: "ShieldCheck",
+        projects: ["Authentication Services", "Payment/Transaction APIs"],
+        tools: ["JWT", "OAuth2", "Postman", "Swagger / OpenAPI"]
+      },
+      {
+        name: "Apache Kafka",
+        version: "v3+",
+        proficiency: "Intermediate",
+        experience: "6+ Months",
+        icon: "Podcast",
+        projects: ["MIDAS Core Event-Driven System"],
+        tools: ["Spring Kafka", "Consumer Groups", "Topics & Partitions", "Offsets"]
+      }
+    ]
+  },
+  {
+    name: "Database Management",
+    description: "Data storage and retrieval systems",
+    icon: "Database",
+    gradient: "from-accent to-secondary",
+    skills: [
+      {
+        name: "MongoDB",
+        version: "v7+",
+        proficiency: "Advanced",
+        experience: "2+ years",
+        icon: "Database",
+        projects: ["Document Stores", "Aggregation Pipelines", "Indexing"],
+        tools: ["Mongoose", "MongoDB Compass", "Atlas", "Aggregation"]
+      },
+      {
+        name: "MySQL",
+        version: "v8+",
+        proficiency: "Advanced",
+        experience: "1+ years",
+        icon: "Table",
+        projects: ["Relational Data Modeling", "Query Optimization", "Database Migrations"],
+        tools: ["MySQL Workbench", "phpMyAdmin", "JDBC", "Flyway"]
+      },
+      {
+        name: "Prisma",
+        version: "v5+",
+        proficiency: "Advanced",
+        experience: "2+ years",
+        icon: "Database",
+        projects: ["Type-safe Queries", "Schema Management", "Migrations"],
+        tools: ["Prisma Studio", "Prisma Client", "Schema", "Migrate"]
+      },
+      // 🔥 Added: NoSQL you plan/use for projects
+      {
+        name: "Firebase Firestore",
+        version: "v9+",
+        proficiency: "Intermediate",
+        experience: "6+ Months",
+        icon: "Cloud",
+        projects: ["AI Learning Platform", "Realtime Chat & Activity Tracking"],
+        tools: ["Firebase SDK", "Security Rules", "Indexes", "Realtime Updates"]
+      },
+      {
+        name: "SQL & Relational Modeling",
+        version: "SQL:2016",
+        proficiency: "Advanced",
+        experience: "2+ years",
+        icon: "Grid3X3",
+        projects: ["ATM Simulation", "Library Management System", "E-commerce Orders"],
+        tools: ["Joins & Subqueries", "Indexes", "Transactions", "Stored Procedures"]
+      }
+    ]
+  }
     
   ];
 

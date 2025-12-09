@@ -7,7 +7,6 @@ import HeroSection from './components/HeroSection';
 import SkillsVisualization from './components/SkillsVisualization';
 import FeaturedProjects from './components/FeaturedProjects';
 import GitHubActivity from './components/GitHubActivity';
-
 const HomepageDeveloperPortfolioHub = () => {
   useEffect(() => {
     // Smooth scroll behavior for anchor links
@@ -41,6 +40,7 @@ const HomepageDeveloperPortfolioHub = () => {
 
   return (
     <>
+    
       <Helmet>
         <title>Vamsidhar Reddy – Software Developer | React, Java, Spring Boot</title>
         <meta 

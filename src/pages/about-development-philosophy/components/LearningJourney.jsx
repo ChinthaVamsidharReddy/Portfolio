@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Icon from '../../../components/AppIcon';
+import { progress } from 'framer-motion';
 
 const LearningJourney = () => {
   const [activeCategory, setActiveCategory] = useState('certifications');
@@ -49,7 +50,69 @@ const LearningJourney = () => {
         skills: ["Data Structures", "Algorithms", "Problem Solving", "Time and Space Complexity"],
         icon: "Server",
         color: "accent"
-      }
+      },
+      {
+  id: 5,
+  title: "System Design",
+  issuer: "GeeksForGeeks",
+  date: "Nov 2025",
+  status: "completed",
+  description: "Comprehensive training on designing scalable, fault-tolerant, and high-performance distributed systems. Covered core architectural patterns, load balancing, caching strategies, database sharding, microservices, and real-world system design problem-solving.",
+  skills: [
+    "High-Level System Architecture",
+    "Low-Level Design (LLD)",
+    "Scalability & Performance Optimization",
+    "Load Balancing",
+    "Caching Strategies (Redis/CDN)",
+    "Database Sharding & Replication",
+    "Microservices & API Design",
+    "Message Queues (Kafka/RabbitMQ)",
+    "CAP Theorem & Consistency Models",
+    "Distributed System Concepts"
+  ],
+  icon: "Laptop",
+  color: "red"
+},
+{
+  id: 6,
+  title: "Professional Email Writing",
+  issuer: "LinkedIn Learning",
+  date: "Oct 2025",
+  status: "completed",
+  description: "Focused on writing clear, concise, and professional emails for workplace communication. Covered tone management, structuring messages effectively, drafting formal requests, resolving conflicts through email, and improving readability for business communication.",
+  skills: [
+    "Professional Communication",
+    "Email Etiquette",
+    "Formal Writing",
+    "Concise Messaging",
+    "Tone & Clarity",
+    "Workplace Communication"
+  ],
+  icon: "Mail",
+  color: "sky"
+},
+{
+  id: 7,
+  title: "NoSQL Databases",
+  issuer: "Infosys springboard",
+  date: "Sep 2025",
+  status: "completed",
+  description: "Understanding NoSQL database models including document, key-value, graph, and column-family stores. Learned data modeling, distributed storage, scalability techniques, and real-world usage of NoSQL systems like MongoDB and Cassandra.",
+  skills: [
+    "NoSQL Data Modeling",
+    "Document Databases (MongoDB)",
+    "Key-Value Stores",
+    "Graph Databases",
+    "Column-Based Databases",
+    "Sharding & Replication",
+    "High Availability",
+    "Distributed Databases"
+  ],
+  icon: "Database",
+  color: "lime"
+}
+
+      
     ],
     // conferences: [
     //   {
@@ -102,7 +165,7 @@ const LearningJourney = () => {
       title: "Full-Stack Web Development",
       description: "Building scalable web applications using Node.js and Java Spring Boot",
       technologies: ["Node.js", "Express", "Java", "Spring Boot", "REST APIs", "MongoDB/MySQL"],
-      progress: 80,
+      progress: 92,
       status: "active",  // or "active" if you're still learning
       icon: "Code",
       color: "success"
@@ -112,12 +175,55 @@ const LearningJourney = () => {
         id: 3,
         title: "Mobile Development",
         description: "Cross-platform mobile app development with React Native",
-        technologies: ["React Native", "Expo", "Native Modules", "App Store"],
-        progress: 30,
-        status: "planned",
+        technologies: ["React Native","Flutter", "Expo", "Native Modules", "App Store"],
+        progress: 70,
+        status: "active",
         icon: "Smartphone",
         color: "conversion"
-      }
+      },
+      {
+    id: 5,
+    title: "Software Development",
+    description: "Deepening expertise in software engineering principles, OOP, system design, debugging strategies, and clean code practices.",
+    technologies: ["Java", "Python", "Design Patterns", "OOP", "Data Structures & Algorithms"],
+    progress: 89,
+    status: "active",
+    icon: "Settings",
+    color: "red"
+  },
+
+  {
+    id: 6,
+    title: "Cloud & DevOps",
+    description: "Hands-on learning of cloud-native deployments, CI/CD automation, containerization, and serverless applications.",
+    technologies: ["AWS", "Docker", "Kubernetes", "GitHub Actions", "Firebase Hosting"],
+    progress: 45,
+    status: "active",
+    icon: "Cloud",
+    color: "cyan"
+  },
+
+  {
+    id: 7,
+    title: "Data Engineering",
+    description: "Understanding data pipelines, ETL workflows, real-time streaming, and database optimization.",
+    technologies: ["Kafka", "Airflow", "SQL", "NoSQL", "Data Pipelines"],
+    progress: 40,
+    status: "active",
+    icon: "Database",
+    color: "info"
+  },
+
+  {
+    id: 8,
+    title: "Cybersecurity Fundamentals",
+    description: "Learning security best practices for applications, secure authentication, OWASP principles, and encryption techniques.",
+    technologies: ["JWT", "OAuth2", "OWASP Top 10", "Network Security Basics"],
+    progress: 65,
+    status: "active",
+    icon: "Shield",
+    color: "sky"
+  }
     ]
   };
 
@@ -148,8 +254,71 @@ const LearningJourney = () => {
         default: 'text-conversion bg-conversion/10',
         badge: 'bg-conversion/20 text-conversion',
         progress: 'bg-conversion'
-      }
-    };
+      },
+      success: {
+      default: 'text-green-600 bg-green/10',
+      badge: ' text-green-600',
+      progress: 'bg-green-600'
+    },
+    warning: {
+      default: 'text-amber-600 bg-amber/10',
+      badge: 'text-amber-700',
+      progress: 'bg-amber-600'
+    },
+
+    info: {
+      default: 'text-blue-600 bg-blue/10',
+      badge: 'text-blue-700',
+      progress: 'bg-blue-600'
+    },
+
+
+    light: {
+      default: 'text-zinc-600',
+      badge: 'text-zinc-700',
+      progress: 'bg-zinc-400'
+    },
+
+    purple: {
+      default: 'text-purple-600',
+      badge: 'text-purple-700',
+      progress: 'bg-purple-600'
+    },
+red:{
+default:'text-red-700',
+badge:'text-red-700',
+progress:'bg-red-700'
+},
+    teal: {
+      default: 'text-teal-600',
+      badge: 'text-teal-700',
+      progress: 'bg-teal-600'
+    },
+
+    grey: {
+      default: 'text-grey-200',
+      badge: 'text-grey-700',
+      progress: 'bg-grey-600'
+    },
+    sky: {
+      default: 'text-sky-600',
+      badge: 'text-sky-700',
+      progress: 'bg-sky-600'
+    },
+
+    cyan: {
+      default: 'text-cyan-600',
+      badge: 'text-cyan-700',
+      progress: 'bg-cyan-600'
+    },
+
+    lime: {
+      default: 'text-lime-600',
+      badge: 'text-lime-700',
+      progress: 'bg-lime-600'
+    }
+  };
+
     return colors[color]?.[variant] || colors.primary[variant];
   };
 

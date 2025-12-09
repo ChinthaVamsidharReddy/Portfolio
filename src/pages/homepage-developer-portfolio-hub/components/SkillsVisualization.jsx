@@ -12,7 +12,8 @@ const SkillsVisualization = () => {
         { name: "React", level: 65, experience: "5+ months", color: "primary" },
         { name: "JSP", level: 85, experience: "1+ years", color: "secondary" },
         { name: "Servlet", level: 88, experience: "1+ years", color: "accent" },
-        { name: "HTML/CSS", level: 92, experience: "2+ years", color: "conversion" }
+        { name: "HTML/CSS", level: 92, experience: "2+ years", color: "conversion" },
+        { name: "JavaScript", level: 83, experience: "1+ years", color: "primary" },
       ]
     },
     {
@@ -22,7 +23,8 @@ const SkillsVisualization = () => {
         { name: "Node.js", level: 85, experience: "6+ months", color: "primary" },
         { name: "Java", level: 92, experience: "3+ years", color: "conversion" },
         { name: "Spring Boot", level: 90, experience: "6+ moths", color: "secondary" },
-        { name: "Express.js", level: 80, experience: "1+ years", color: "accent" }
+        { name: "Express.js", level: 80, experience: "1+ years", color: "accent" },
+        { name: "Hibernate", level: 88, experience: "1+ years", color: "primary" }
       ]
     },
     {
@@ -34,6 +36,7 @@ const SkillsVisualization = () => {
         { name: "MySQL", level: 87, experience: "1+ years", color: "accent" },
         { name: "VSCode", level: 90, experience: "3+ Years", color: "secondary" },
         { name: "Eclipse", level: 93, experience: "1+ years", color: "conversion" },
+        { name: "Docker", level: 88, experience: "6 months", color: "primary" },
       ]
     }
   ];
@@ -151,7 +154,9 @@ const SkillsVisualization = () => {
       "Python",
       "Spring Boot",
       "MySQL",
-      "Express"
+      "Express",
+      "websockets",
+      "SQLAlchemys"
             ].map((tech) => (
               <span
                 key={tech}

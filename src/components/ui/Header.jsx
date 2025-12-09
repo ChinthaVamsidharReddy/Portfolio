@@ -12,6 +12,7 @@ const Header = () => {
     { name: "Home", path: "/homepage-developer-portfolio-hub", icon: "Home" },
     { name: "About", path: "/about-development-philosophy", icon: "User" },
     { name: "Portfolio", path: "/technical-portfolio-case-studies", icon: "Briefcase" },
+    {name:"Blog", path: "/technical-blog-knowledge-center",icon:"BookOpen"},
     { name: "Resume", path: "/assets/pdf/Vamsidhar_Reddy_Resume.pdf", icon: "FileText" },
     { name: "Skills", path: "/skills-technical-expertise", icon: "Code" },
     { name: "Contact", path: "/professional-contact-collaboration", icon: "Mail" },
@@ -52,7 +53,7 @@ const Header = () => {
             </div>
             <div className="hidden sm:block">
               <h1 className="text-lg sm:text-xl font-poppins font-bold text-gradient">
-                DevPortfolio Pro
+                DevPortfolio
               </h1>
               <p className="text-[10px] sm:text-xs text-muted-foreground font-inter">
                 Vamsidhar’s Technical Showcase

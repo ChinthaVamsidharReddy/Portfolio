@@ -54,7 +54,7 @@ const ProfessionalContactCollaboration = () => {
     },
     {
       icon: 'Users',
-      value: '5+',
+      value: '8+',
       label: 'Projects Completed',
       color: 'text-primary'
     },
@@ -283,7 +283,7 @@ const ProfessionalContactCollaboration = () => {
         iconPosition="right"
         className="bg-conversion hover:bg-conversion/90 text-conversion-foreground"
         // onClick={handleContactClick}
-        ><a href='https://www.linkedin.com/in/chintha-vamsidhar-reddy/'>
+        ><a href='https://www.linkedin.com/in/c-vamsidharreddy/'>
         Let’s Connect
         </a>
         </Button>

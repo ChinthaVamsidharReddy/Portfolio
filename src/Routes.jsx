@@ -11,6 +11,7 @@ import SkillsTechnicalExpertise from "pages/skills-technical-expertise";
 import ResumeProfessionalCredentials from "pages/resume-professional-credentials";
 import NotFound from "pages/NotFound";
 import ContactMethods from "pages/professional-contact-collaboration/components/ContactMethods";
+import Technicalblogknowledgecenter from "pages/technical-blog-knowledge-center";
 const Routes = () => {
   return (
     <BrowserRouter >
@@ -26,7 +27,7 @@ const Routes = () => {
         <Route path="/skills-technical-expertise" element={<SkillsTechnicalExpertise />} />
         <Route path="/resume-professional-credentials" element={<ResumeProfessionalCredentials />} />
         <Route path="/contact-methods" element={<ContactMethods />} />
-
+        <Route path="/technical-blog-knowledge-center" element={<Technicalblogknowledgecenter />}/>
 
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>

@@ -79,10 +79,10 @@ public class Student {
           
           {/* LEFT CONTENT */}
           <div className="space-y-6 text-center lg:text-left">
-            <div className="flex items-center justify-center lg:justify-start space-x-2">
+            {/* <div className="flex items-center justify-center lg:justify-start space-x-2">
               <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
               <span className="text-accent text-sm sm:text-base font-medium">Open to internships & entry-level roles</span>
-            </div>
+            </div> */}
 
             <h1 className="text-3xl sm:text-4xl lg:text-6xl font-poppins font-bold leading-tight">
               Hi, I'm{' '}
