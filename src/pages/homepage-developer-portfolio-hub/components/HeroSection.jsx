@@ -38,7 +38,7 @@ app.listen(3000);`
       code: `import java.util.*;
 public class Student {
   public static void main(String[] args) {
-    System.out.println("Vamsidhar Reddy | GPA: 8.16 | Skills: Java, React");
+    System.out.println("Vamsidhar Reddy | GPA: 8.3 | Skills: Java, React");
   }
 }`
     },
