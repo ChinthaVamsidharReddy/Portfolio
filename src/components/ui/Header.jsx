@@ -12,7 +12,6 @@ const Header = () => {
     { name: "Home", path: "/homepage-developer-portfolio-hub", icon: "Home" },
     { name: "About", path: "/about-development-philosophy", icon: "User" },
     { name: "Portfolio", path: "/technical-portfolio-case-studies", icon: "Briefcase" },
-    {name:"Blog", path: "/technical-blog-knowledge-center",icon:"BookOpen"},
     { name: "Resume", path: "/assets/pdf/Vamsidhar_Reddy_Resume.pdf", icon: "FileText" },
     { name: "Skills", path: "/skills-technical-expertise", icon: "Code" },
     { name: "Contact", path: "/professional-contact-collaboration", icon: "Mail" },
