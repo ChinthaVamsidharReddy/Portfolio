@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Vamsidhar Reddy — Full-Stack & AI Engineer",
     description:
       "4 production systems · IEEE Xplore 2025 · Infosys SWE Intern. Building scalable backend systems and full-stack products.",
-    url: "https://vamsidharreddy.vercel.app",
+    url: "https://portfolio-umber-three-7x4ca651hy.vercel.app/",
     siteName: "Vamsidhar Reddy Portfolio",
     type: "website",
   },
@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://vamsidharreddy.vercel.app" />
+        <link rel="canonical" href="https://portfolio-umber-three-7x4ca651hy.vercel.app/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -47,10 +47,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@type": "Person",
               name: "Chintha Vamsidhar Reddy",
               jobTitle: "Full-Stack & AI Engineer",
-              url: "https://vamsidharreddy.vercel.app",
+              url: "https://portfolio-umber-three-7x4ca651hy.vercel.app/",
               sameAs: [
                 "https://github.com/ChinthaVamsidharReddy",
-                "https://linkedin.com/in/vamsidharreddy",
+                "https://linkedin.com/in/chinthavamsidharreddy",
                 "https://ieeexplore.ieee.org/abstract/document/11390093",
               ],
             }),
