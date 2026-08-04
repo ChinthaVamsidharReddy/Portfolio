@@ -12,9 +12,9 @@ export const siteConfig = {
 };
 
 export const heroStats = [
-  { label: "Production Systems", value: "4+", suffix: "" },
+  { label: "Production Systems", value: "4", suffix: "+" },
   { label: "Technologies", value: "20", suffix: "+" },
-  { label: "IEEE Publication", value: "1", suffix: "" },
+  { label: "Publications", value: "2", suffix: "" },
   { label: "Years Building", value: "3", suffix: "+" },
 ];
 
@@ -27,7 +27,6 @@ export const skillCategories = [
       { name: "Java", level: 90 },
       { name: "Spring Boot", level: 88 },
       { name: "Node.js", level: 80 },
-      // {name: "Python", level: 90},
       { name: "REST APIs", level: 90 },
       { name: "Microservices", level: 78 },
     ],
@@ -45,13 +44,13 @@ export const skillCategories = [
     ],
   },
   {
-    name: "AI / ML",
+    name: "AI / ML & IoT",
     icon: "brain",
     color: "emerald",
     skills: [
       { name: "TensorFlow Lite", level: 78 },
       { name: "LLM Integration", level: 80 },
-      { name: "RAG Pipelines", level: 72 },
+      { name: "Arduino / IoT", level: 75 },
       { name: "Flutter", level: 70 },
       { name: "Python", level: 75 },
     ],
@@ -71,28 +70,17 @@ export const skillCategories = [
 ];
 
 export const experience = [
-{
-  type: "work",
-  role: "Software Engineer Intern",
-  company: "Infosys Springboard",
-  period: "2026",
-  location: "India",
-  description:
-"Developed enterprise Java applications using Spring Boot within an Agile team. Contributed to microservices design, REST API development, and cloud deployment pipelines for production systems serving thousands of users.",
-  tech: [
-    "Java",
-    "Spring Boot",
-    "REST APIs",
-    "MySQL",
-    "Hibernate",
-    "Spring Data JPA",
-    "System Design",
-    "Microservices",
-    "Git",
-    "Agile"
-  ],
-  highlight: true,
-},
+  {
+    type: "work",
+    role: "Software Engineer Intern",
+    company: "Infosys",
+    period: "2024",
+    location: "India",
+    description:
+      "Developed enterprise Java applications using Spring Boot within an Agile team. Contributed to microservices design, REST API development, and cloud deployment pipelines for production systems.",
+    tech: ["Java", "Spring Boot", "REST APIs", "MySQL", "Agile", "CI/CD"],
+    highlight: true,
+  },
   {
     type: "education",
     role: "B.Tech Computer Science Engineering",
@@ -100,27 +88,66 @@ export const experience = [
     period: "2022 – 2026",
     location: "Tamil Nadu, India",
     description:
-      "Graduated with a focus on distributed systems, applied machine learning, and software engineering. Published IEEE peer-reviewed research paper in final year. Built 4+ production systems during studies.",
-    tech: ["Algorithms", "Distributed Systems", "ML", "Java", "Python"],
+      "Graduated with a focus on distributed systems, applied machine learning, and software engineering. Published two peer-reviewed research papers during studies — IEEE Xplore (2025) and CRC Press / Taylor & Francis (2026).",
+    tech: ["Algorithms", "Distributed Systems", "ML", "IoT", "Java", "Python"],
     highlight: false,
   },
 ];
 
-export const publication = {
-  title: "Herbal Plant Identifier Using Flutter and TensorFlow Lite",
-  conference: "IEEE Xplore 2025",
-  year: 2025,
-  doi: "https://ieeexplore.ieee.org/abstract/document/11390093",
-  abstract:
-    "A mobile-first medicinal plant identification system using on-device machine learning with TensorFlow Lite to classify 40 herbal plant species at 92% accuracy — entirely offline. Designed for deployment in remote agricultural and healthcare settings where connectivity is unreliable.",
-  metrics: [
-    { label: "Accuracy", value: "92%" },
-    { label: "Plant Classes", value: "40" },
-    { label: "Connectivity Required", value: "None" },
-    { label: "Platform", value: "Flutter" },
-  ],
-  keywords: ["TensorFlow Lite", "Flutter", "Mobile ML", "Computer Vision", "Healthcare AI", "Edge Computing"],
-};
+export const publications = [
+  {
+    id: "ieee-plant",
+    title: "Herbal Plant Identifier Using Flutter and TensorFlow Lite",
+    publisher: "IEEE Xplore",
+    publisherBadge: "IEEE",
+    book: null,
+    year: 2025,
+    doi: "https://ieeexplore.ieee.org/abstract/document/11390093",
+    doiCode: "IEEE Xplore 2025",
+    abstract:
+      "A mobile-first medicinal plant identification system using on-device machine learning with TensorFlow Lite to classify 40 herbal plant species at 92% accuracy — entirely offline. Designed for deployment in remote agricultural and healthcare settings where internet connectivity is unavailable.",
+    metrics: [
+      { label: "Accuracy", value: "92%" },
+      { label: "Plant Classes", value: "40" },
+      { label: "Connectivity", value: "Offline" },
+      { label: "Platform", value: "Flutter" },
+    ],
+    keywords: ["TensorFlow Lite", "Flutter", "Mobile ML", "Computer Vision", "Healthcare AI", "Edge Computing"],
+    authors: ["C. Vamsidhar Reddy", "et al."],
+    gradient: "from-indigo-600 via-violet-600 to-purple-700",
+    accentColor: "indigo",
+    pages: null,
+  },
+  {
+    id: "crc-iot-vending",
+    title: "Automated Vending Machine with Reward Mechanism for Plastic Bottle Management",
+    publisher: "CRC Press / Taylor & Francis",
+    publisherBadge: "CRC",
+    book: "Emerging Trends in Smart Computing and Sustainable Communication",
+    year: 2026,
+    doi: "https://www.taylorfrancis.com/chapters/edit/10.1201/9781003662808-52/automated-vending-machine-reward-mechanism-plastic-bottle-management-abhishek-tripathi-shilpi-gupta-abhinay-krishna-vamsidhar-reddy-dhanushya-lakshmi-dhanush-harsha-vardhini",
+    doiCode: "10.1201/9781003662808-52",
+    abstract:
+      "A prototype for an automated vending machine that uses an Arduino Uno, IR sensors, servo motors, and an LCD screen to incentivize plastic bottle recycling. The system autonomously detects and sorts bottles, delivering user feedback and reward mechanisms. Across 10 experimental trials, detection accuracy ranged from 80–100%, subsystem success rates reached 70–100%, and user satisfaction scores were positive. Aligned with UN SDG 11 (Sustainable Cities) and SDG 12 (Responsible Consumption).",
+    metrics: [
+      { label: "Detection Accuracy", value: "80–100%" },
+      { label: "Subsystem Success", value: "70–100%" },
+      { label: "Trials", value: "10" },
+      { label: "SDG Alignment", value: "11 & 12" },
+    ],
+    keywords: ["IoT", "Arduino", "Smart Recycling", "IR Sensors", "Sustainability", "SDG 12", "SDG 11"],
+    authors: [
+     
+      "C. Vamsidhar Reddy","et al.",
+    ],
+    gradient: "from-emerald-600 via-teal-600 to-cyan-700",
+    accentColor: "emerald",
+    pages: "pp. 286–290",
+  },
+];
+
+// Legacy single-publication export kept for backward compat
+export const publication = publications[0];
 
 export const projects = [
   {
@@ -280,7 +307,7 @@ export const projects = [
   github: "https://github.com/ChinthaVamsidharReddy/Aforro-Backend-Assignment",
   live: "#",
   gradient: "from-emerald-600 via-teal-600 to-cyan-700",
-  accentHex: "#222bcc",
+  accentHex: "#e40e47",
   tagColor: "emerald",
 },
 {
@@ -320,7 +347,7 @@ export const projects = [
   github: "https://github.com/ChinthaVamsidharReddy/SkyNest",
   live: "#",
   gradient: "from-sky-600 via-blue-600 to-indigo-700",
-  accentHex: "#0284c7",
+  accentHex: "#a9ea1b",
   tagColor: "sky",
 },
 {
@@ -367,6 +394,6 @@ export const projects = [
 
 export const certifications = [
   { name: "AWS Cloud Practitioner", issuer: "Amazon Web Services", year: 2024, icon: "cloud" },
-  { name: "Java Full-Stack Development", issuer: "Infosys / Springboard", year: 2025, icon: "code" },
-  { name: "Database Management System", issuer: "CodeChef", year: 2024, icon: "box" },
+  { name: "Java Full-Stack Development", issuer: "Infosys / Springboard", year: 2024, icon: "code" },
+  { name: "Docker & Kubernetes Fundamentals", issuer: "CNCF / Coursera", year: 2023, icon: "box" },
 ];

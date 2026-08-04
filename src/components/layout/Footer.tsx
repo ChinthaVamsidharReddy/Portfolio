@@ -6,7 +6,9 @@ export default function Footer() {
     <footer className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 py-10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-sm text-gray-500 dark:text-gray-400">
-          © {year} <span className="font-semibold text-gray-700 dark:text-gray-300">{siteConfig.name}</span>
+          © {year}{" "}
+          <span className="font-semibold text-gray-700 dark:text-gray-300">{siteConfig.name}</span>
+          {" · "}Built with Next.js 15, Tailwind, Framer Motion
         </div>
         <div className="flex items-center gap-4">
           <a href={siteConfig.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm transition-colors">GitHub</a>
